@@ -26,7 +26,7 @@ BASE_URL = "http://{0}/cgi-bin/ConfigManApp.com"
 
 
 def make_request(params):
-    return requests.get(BASE_URL.format(ARGS.host), auth=(ARGS.user, ARGS.pwd), params=params)
+    return requests.get(BASE_URL.format(ARGS.host), auth=(ARGS.user, ARGS.pwd), params=params, verify=False)
 
 
 def press_key(key):
